@@ -51,6 +51,7 @@ int main() {
     
     int t;
     cin>>t;
+    int cnt =0;
     t++;
     while(t--){
         string str;
@@ -58,10 +59,12 @@ int main() {
         convertWords(str);
         sort(vint.begin(),vint.end());
         sort(vstr.begin(),vstr.end(),comp);
-        for(int i=0;i<vint.size();i++){
+        int i;
+        for(i=0;i<vint.size();i++){
             cout << vstr[i] <<" "<<vint[i] <<" ";
+            cnt++;
         }
-        cout << endl;
+        if(cnt > 1) cout << endl;
         vint.clear();
         vstr.clear();
     }
